@@ -385,3 +385,21 @@ uid=0(root) gid=0(root) groups=0(root)
 ```
 Despues de interactuar, logramos ser root y terminar el laboratorio.
 
+**Remediación SQLi**
+
+La solución se aplica en múltiples capas. Ninguna medida única es suficiente si se implementa mal. 
+```md
+1. Consultas Preparadas (Prepared Statements). Separa el código SQL de los datos, haciendo imposible la inyección.
+
+2. Validación y Saneamiento del Input (Defensa en Profundidad). Aunque las consultas preparadas son suficientes, validar el input añade una capa extra.
+
+3. Principio de Mínimo Privilegio en la Base de Datos. El usuario de la BD usado por la aplicación nunca debe ser root o tener permisos que no necesita.
+
+5. Deshabilitar Mensajes de Error Detallados. Los errores SQL en producción revelan información crítica.
+
+6. Web Application Firewall (WAF). Un WAF (modsecurity, Cloudflare, AWS WAF) puede detectar y bloquear patrones de ataque
+
+7. Actualizar y Parchear. Mantén actualizado
+```
+Como medida final, se recomienda restringir los permisos de los ejecutables del sistema únicamente a usuarios autorizados.
+
