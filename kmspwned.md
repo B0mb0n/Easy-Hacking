@@ -232,7 +232,7 @@ Desglose:
 | **column_name** | 		Nombre de cada columna |
 | **null** | 	Columna 3 vacía |
 | **FROM information_schema.tables** | 	Base de datos del sistema |
-| **WHERE table_schema = 'sc_usuarios'** | 	Filtra solo columnas de 'sc_usuarios' |
+| **WHERE table_name = 'sc_usuarios'** | 	Filtra solo columnas de 'sc_usuarios' |
 | **-- -** | 	Comenta el resto de la consulta original |
 ```json
 {
