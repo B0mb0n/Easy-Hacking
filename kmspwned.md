@@ -285,8 +285,7 @@ Desglose:
 | **usuario** | 	Enumerar columna usuario (reemplaza id) |
 | **password** | 	Enumerar columna password (reemplaza extension) |
 | **email** | 	Enumerar columna email (reemplaza precio) |
-| **FROM information_schema.tables** | 	Base de datos del sistema |
-| **WHERE table_schema = 'sc_usuarios'** | 	Filtra solo columnas de 'sc_usuarios' |
+| **FROM sc_usuarios** | 	Tabla objetivo descubierta  |
 | **-- -** | 	Comenta el resto de la consulta original |
 ```json
 {
