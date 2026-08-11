@@ -245,7 +245,7 @@ Desglose:
             "precio":null
         },
         {
-            "id":"1",
+            "id":"null",
             "extension":"usuario",
             "precio":null
         },
@@ -393,6 +393,15 @@ uid=0(root) gid=0(root) groups=0(root)
 ```
 Despues de interactuar, logramos ser root y terminar el laboratorio.
 
+**Diagrama de ataque**
+
+```mermaid
+graph TD;
+    A[Recon] --> B[SQLi];
+    B --> C[Cred Cracking];
+    C --> D[Lateral Movement];
+    D --> E[PrivEsc];
+```
 **Remediación SQLi**
 
 La solución se aplica en múltiples capas. Ninguna medida única es suficiente si se implementa mal. 
