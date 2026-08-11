@@ -9,7 +9,10 @@ Recuerda que para montar el laboratorio tienes que iniciar tu docker.
 ```bash
 sudo systemctl start docker 
 ```
-
+Para iniciar la maquina, descomprimirla y ejecutarla.
+```bash
+bash auto_deploy.sh kmspwned.tar 
+```
 ## Escaneo Nmap
 ```bash
 nmap -sS -sV -Pn -f 172.17.0.2
