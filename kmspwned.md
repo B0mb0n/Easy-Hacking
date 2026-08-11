@@ -310,6 +310,14 @@ Desglose:
     ]
 }
 ```
+Características de un hash MD5.
+
+| Propiedad | Valor |
+| --- | --- |
+| **Longitud** | 	Exactamente 32 caracteres |
+| **Juego de caracteres** | 	Hexadecimal: 0-9 y a-f |
+| **Formato regex** | 	^[a-f0-9]{32}$ |
+
 Observamos que obtenemos hashes MD5 (Message Digest Algorithm 5). Utilizaremos crackstation.net que usa rainbow tables (tablas arcoíris) masivas para buscar el texto plano de hashes comunes sin salt.
 
 | Usuario | Contraseña |
