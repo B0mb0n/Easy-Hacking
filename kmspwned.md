@@ -234,7 +234,7 @@ Desglose:
 | **null** | 	Columna 1 vacía |
 | **column_name** | 		Nombre de cada columna |
 | **null** | 	Columna 3 vacía |
-| **FROM information_schema.tables** | 	Base de datos del sistema |
+| **FROM information_schema.columns** | 	Tabla del sistema con datos de columnas |
 | **WHERE table_name = 'sc_usuarios'** | 	Filtra solo columnas de 'sc_usuarios' |
 | **-- -** | 	Comenta el resto de la consulta original |
 ```json
