@@ -491,7 +491,7 @@ graph TD;
 
 4. Validación de rutas.
 
-5. configuración PHP. (Limitar directorios accesibles,  Deshabilitar funciones peligrosas)
+5. configuración PHP. (Limitar directorios accesibles, deshabilitar funciones peligrosas)
 
 6. Configuración de vsftpd
 
