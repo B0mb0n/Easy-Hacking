@@ -10,7 +10,7 @@ sudo systemctl start docker
 ```
 Para iniciar la maquina, descomprimirla y ejecutarla.
 ```bash
-bash auto_deploy.sh kmspwned.tar 
+bash auto_deploy.sh hannah-coffee.tar
 ```
 ## Escaneo Nmap
 ```bash
@@ -457,7 +457,7 @@ graph TD;
 
 5. configuración PHP. (Limitar directorios accesibles,  Deshabilitar funciones peligrosas)
 
-5. Configuración de vsftpd
+6. Configuración de vsftpd
 
-6. Configurar firewall y monitoreo
+7. Configurar firewall y monitoreo
 ```
