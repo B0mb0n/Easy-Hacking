@@ -360,11 +360,10 @@ Cuando ejecutas esto:
 
 <br>• Esto crea una escapatoria (*shell escape*) directa para ejecutar comandos arbitrarios con los privilegios de `hannah`. 
 
+2. Capabilities
 ```bash
 getcap -r / 2> /dev/null
 ```
-2. Capabilities
-
 ¿Qué son las Capabilities en Linux?
 
 Las capabilities son una característica de seguridad de Linux que divide los privilegios del superusuario (root) en unidades más pequeñas y manejables. En lugar de dar todos los poderes de root a un binario, se le pueden dar solo capabilities específicas.
