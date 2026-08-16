@@ -445,7 +445,7 @@ graph TD;
     G --> H[PrivEsc]
 ```
 
-** Remediación LFI ** 
+**Remediación LFI** 
 ```md
 1. Eliminar permisos sudo peligrosos
 
