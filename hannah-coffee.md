@@ -256,7 +256,9 @@ style.css
 </html>
 ```
 Confirmado, tenemos una vulnerabilidad de tipo Local File Inclusion (LFI) en la aplicación web "Hannah's Coffee" que permite a un atacante ejecutar comandos arbitrarios en el servidor (Remote Code Execution - RCE) mediante la técnica de Log Poisoning del servicio FTP vsftpd. Procederemos a ejecutar una shell inversa.
-
+```bash
+Sun Aug 16 19:58:11 2026 [pid 428] [index.php pages style.css]
+```
 Listener.
 ```bash
 nc -lvnp 4444
@@ -430,7 +432,7 @@ total 4
 cat root.txt
 dl{root_d5cc9d7538dc7c341cd96bba5a951520}
 ```
-Mediante código de python cambiamos nuestro UID a 0 (root) y tener una shell, indagamos una vez ejecutado y vemos la bandera en /root/root.txt y terminamos el laboratorio
+Mediante código de python cambiamos nuestro UID a 0 (root) y tener una shell, indagamos una vez ejecutado y vemos la bandera en /root/root.txt y terminamos el laboratorio.
 
 **Diagrama de ataque.**
 
