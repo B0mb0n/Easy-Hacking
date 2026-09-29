@@ -1,13 +1,26 @@
+```md
+By: B0mb0ncitoo
+
+Este laboratorio lo puedes encontrar en dockerlabs.es de manera gratuita en la sección de Facil.
+```
 Readme allien · MD
 # Writeup: Allien (Samba/PHP → Root)
  
 **Dificultad:** Fácil
 **Servicios:** SSH (22), HTTP/Apache (80), SMB/Samba (139/445)
 **Vector final:** Sudo mal configurado sobre `service` (GTFOBins)
- 
+
+Recuerda que para montar el laboratorio tienes que iniciar tu docker.
+```bash
+sudo systemctl start docker 
+```
+Para iniciar la maquina, descomprimirla y ejecutarla.
+```bash
+bash auto_deploy.sh hannah-coffee.tar
+```
 ---
  
-## 1. Resumen ejecutivo
+## 1. Resumen 
  
 La máquina expone un servicio Samba con **sesión nula (NULL session)** habilitada y un recurso compartido (`myshare`) de lectura anónima que filtra un JWT. El mismo Samba tiene un segundo recurso (`backup24`) protegido por una contraseña débil, obtenida por fuerza bruta con `rockyou.txt`, que a su vez contiene un archivo de texto plano con credenciales de 10 usuarios, incluida la del `administrador`. Con esa credencial se obtiene acceso SSH directo. Desde ahí se localiza un directorio web (`/var/www/html`) con permisos de escritura para el usuario ya autenticado, lo que permite sobrescribir `info.php` y convertirlo en una **webshell**, obteniendo ejecución de comandos como `www-data`. Finalmente, una regla de `sudo` mal configurada (`NOPASSWD: /usr/sbin/service`) permite escalar a `root` abusando de un binario que GTFOBins documenta como explotable.
  
