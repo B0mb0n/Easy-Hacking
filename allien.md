@@ -16,7 +16,7 @@ sudo systemctl start docker
 ```
 Para iniciar la maquina, descomprimirla y ejecutarla.
 ```bash
-bash auto_deploy.sh hannah-coffee.tar
+bash auto_deploy.sh allien.tar
 ```
 ---
  
